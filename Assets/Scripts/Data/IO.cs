@@ -25,7 +25,7 @@ public static class IO : MonoBehaviour {
 	}
 	
 	/// <summary>
-	/// 今あるハイスコアと比較し、スコアを登録。
+	/// 今あるハイスコアと比較し、スコアを登録
 	/// </summary>
 	/// <param name="score">現在のスコア</param>
 	/// <returns>更新あり：true 更新なし：false</returns>
