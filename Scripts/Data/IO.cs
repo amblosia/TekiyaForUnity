@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
+/// <summary>
+/// データ受け渡しメソッド（ハイスコア記録）
+/// </summary>
 public static class IO : MonoBehaviour {
 
 	private static readonly string[] hiScoreKeys = new string[]{
@@ -31,10 +34,10 @@ public static class IO : MonoBehaviour {
 	/// <returns>更新あり：true 更新なし：false</returns>
 	public static bool SetScore(float score){
 		// 得点なし→更新なし
-		if (score == 0) return false;
+		if (score == 0f) return false;
 			
 		// ハイスコア取得
-		List<float>　scoreList = GetHiScore();
+		List<float> scoreList = GetHiScore();
 
 		// ハイスコアに載らない→更新なし
 		if (scoreList.FindLast() > score) return false;

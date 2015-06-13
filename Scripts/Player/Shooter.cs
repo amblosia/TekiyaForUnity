@@ -28,7 +28,9 @@ public class Shooter : MonoBehaviour, IPointerDownHandler {
 
 		GameObject bullet = (GameObject)Instantiate (bulletPrefub, position, Quaternion.identity);
 
-		//TODO: sounds
+		// SE
+		//SoundManager sm = new SoundManager();
+		//sm.PlaySESound();
 
 		bullet.GetComponent<Rigidbody> ().AddForce (Vector3.up * bulletSpeed, ForceMode.Impulse);
 	}
